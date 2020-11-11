@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <th>No</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Year</th>
+    </tr>
+
+    <tr th:each = "car, state : ${carmesage}">
+
+        <th th:utext="${state.count}">No</th>
+        <th th:utext="${car.brand}">Brand</th>
+        <th th:utext="${car.model}">Model</th>
+        <th th:text="${car.year}">Year</th>
+    </tr>
+</table>
+</body>
+</html>
